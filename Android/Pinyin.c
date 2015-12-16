@@ -115,7 +115,7 @@ JNIEXPORT jstring JNICALL Java_com_aspire_pinyin_Pinyin_getPinyin
 	if (!dst || !dst_size)
 		return NULL;
 
-	jstring* our_string = (*env)->NewString(env, (jchar*) dst, dst_size);
+	jstring our_string = (*env)->NewString(env, (jchar*) dst, dst_size);
     free( dst );
 
 	return our_string;
